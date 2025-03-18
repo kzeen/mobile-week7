@@ -33,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void processLogin() {
         if (binding.etEmail.getText().toString().equals("me@lau.edu.lb") && binding.etPassword.getText().toString().equals("123456")) {
+            LoginPreferencesManager.registerLogin(this, binding.etEmail.getText().toString());
             Intent intent = new Intent(this, DashboardActivity.class);
             startActivity(intent);
             finish();

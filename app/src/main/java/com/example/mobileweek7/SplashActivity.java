@@ -25,10 +25,14 @@ public class SplashActivity extends AppCompatActivity {
         });
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            // your code here to start next activity and finish current
-            Intent intent = new Intent(this, LoginActivity.class);
+            Intent intent;
+            if (!LoginPreferencesManager.isLoggedIn(this)) {
+                intent = new Intent(this, DashboardActivity.class);
+            } else {
+                intent = new Intent(this, LoginActivity.class);
+            }
             startActivity(intent);
-            finish(); // To not return to splash screen - destroys
+            finish();
         }, 2000);
     }
 }
