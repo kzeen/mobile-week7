@@ -6,11 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
+    android:orientation="vertical"
     tools:context=".DashboardActivity">
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/green"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:strokeColor="@android:color/white"
+        app:strokeWidth="3dp" />
 
 </LinearLayout>

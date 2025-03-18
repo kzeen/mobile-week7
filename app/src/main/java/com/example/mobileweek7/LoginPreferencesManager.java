@@ -39,6 +39,6 @@ public class LoginPreferencesManager {
     }
 
     public static String getEmail(Context context) {
-        return getInstance(context).getString(KEY_Email, "H");
+        return getInstance(context).getString(KEY_Email, "def");
     }
 }
