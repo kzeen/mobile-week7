@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             Intent intent;
-            if (!LoginPreferencesManager.isLoggedIn(this)) {
+            if (LoginPreferencesManager.isLoggedIn(this)) {
                 intent = new Intent(this, DashboardActivity.class);
             } else {
                 intent = new Intent(this, LoginActivity.class);
